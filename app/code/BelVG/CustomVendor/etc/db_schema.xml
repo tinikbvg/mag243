@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="vendor" resource="default" comment="Vendor">
+        <column xsi:type="int" name="vendor_id" identity="true" comment="Vendor Auto Increment" />
+        <column xsi:type="varchar" name="name" length="100" nullable="false" comment="Vendor Name" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="vendor_id" />
+        </constraint>
+        <constraint xsi:type="unique" referenceId="Unique">
+            <column name="name" />
+        </constraint>
+    </table>
+</schema>
