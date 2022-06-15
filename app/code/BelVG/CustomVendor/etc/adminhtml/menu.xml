@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BelVG_CustomVendor::module" title="BelVG" module="BelVG_CustomVendor"
+             sortOrder="31" resource="Magento_Backend::system"/>
+        <add id="BelVG_CustomVendor::listing" title="Listing vendor" module="BelVG_CustomVendor"
+             sortOrder="10" resource="Magento_Backend::system" parent="BelVG_CustomVendor::module"
+             action="customvendor/listing"/>
+    </menu>
+</config>
